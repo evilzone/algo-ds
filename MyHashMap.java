@@ -51,7 +51,7 @@ public class MyHashMap<K, V> {
       Entry prevNodeEntry = null;
 
       while(node != null) {
-        if (key == node.key) {
+        if (key.equals(node.key)) {
             node.value = value;
             return;
         }
