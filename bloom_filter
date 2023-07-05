@@ -1,0 +1,24 @@
+What is bloom filter?
+
+    - Probabilistic data structure
+    - used to test if an ELEMENT is a member of a SET or not
+    - Performs operation like NOT IN/ NOT EXISTS in CONSTANT SPACE AND TIME
+    - Never gives FALSE NEGATIVE
+    - Can give FALSE POSITIVE in case of hash collision
+    - Once a bloom filter is created, we cannot remove an item from bloom filter
+
+Use case of bloom filter:
+    - databases like oracle, cassandra uses bloom filter to lookup for query
+    which returns null result set, there by optimizing IO. You can see it in
+    query plan, it will have a step for BLOOM FILTER CREATION and A STEP TO
+    USE IT
+
+    - Used as an efficient data structure to see if a username is available
+
+    - Some browser uses bloom filter to identify malicious URL. A bloom filter
+    is constructed for list of malicious URL any new URL is checked against this
+    filter and if url is not present in bloom filter, we are redirected to that url
+
+    - some recommendation engine uses bloom filter to see if a blog was recommend
+    to the user before or not
+
