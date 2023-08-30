@@ -6,7 +6,6 @@ import java.util.TreeMap;
 public class Application {
 
     public static void main(String[] args) {
-
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("hello", "value1");
         hashMap.put("world", "value2");
